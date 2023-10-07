@@ -1,0 +1,116 @@
+*{
+    margin:0;
+    padding:0;
+}
+body{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    height:100vh;
+}
+
+.gameBox{
+    display:flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position:relative;
+    width:60vw;
+    height:80vh;
+    border:2px solid black;
+
+}
+.padel{
+    position:absolute;
+    width:15%;
+    height:4%;
+    border:1px solid black;
+    background-color: aqua;
+    border-radius: 3px;
+    margin: 2px;
+}
+#padel1{
+    /* animation-name:rightMove; */
+    /* animation-delay: 5s; */
+    /* animation-duration: 4s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: linear;
+    animation-fill-mode: both */
+    animation: rightMove 4s linear 0s infinite alternate;
+}
+
+
+
+@keyframes rightMove{
+    0%{
+        background-color: aqua;
+        top:0;
+        left:0;
+    }
+    /* 25%{
+        background-color: rgb(105, 105, 244) ;
+    }
+    50%{
+        background-color: rgb(46, 46, 251) ;
+    }
+    70%{
+        background-color: rgb(7, 7, 131) ;
+    }
+    80%{
+        background-color: rgb(7, 7, 101) ;
+    }
+    90%{
+        background-color: rgb(2, 2, 57) ;
+    } */
+    100%{
+        background-color: rgb(1, 1, 20) ;
+        top:0;
+        left:84%;
+    }
+}
+#padel2{
+    top:95%;
+    animation: rightMove2 4s linear 0s infinite alternate;
+}
+@keyframes rightMove2 {
+    0%{ 
+        top:95%;
+        left:0%
+    }
+    100%{
+        top:95%;
+        left:84%;
+    }
+}
+
+#ball{
+    position: absolute;
+    width:40px;
+    height:40px;
+    border:1px solid black;
+    background-color: aqua;
+    border-radius: 50%;
+    top:45%;
+    animation: ballMovement 4s linear 0s infinite alternate;
+
+}
+@keyframes ballMovement{
+    0%{
+        top:45%;
+        left:0;
+    }
+    33%{
+        top:0%;
+        left:35%;
+    }
+    66%{
+        top:95%;
+        left:70%;
+    }
+    100%{
+        top:45%;
+        left:0;
+    }
+    
+}
+
